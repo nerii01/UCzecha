@@ -1,0 +1,66 @@
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.wrapper p {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.links a {
+  color: var(--text-on-dark-muted);
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  padding: 10px 0px;
+  box-sizing: border-box;
+}
+
+.links a:hover {
+  color: var(--accent-light);
+  margin-left: 5px;
+}
+
+.copyright p {
+  margin: 0;
+  padding: 0;
+}
+
+.copyright {
+  margin: 0;
+  padding-top: 20px;
+  box-sizing: border-box;
+  border-top: 1px var(--border) dashed;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.copyrightText,
+.author {
+  color: var(--ocean-100);
+}
+
+.author {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}

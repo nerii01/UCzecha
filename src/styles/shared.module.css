@@ -1,0 +1,25 @@
+.header_title {
+  font-size: var(--text-4xl);
+  /* font-family: var(--heading); */
+  font-family: var(--heading-2);
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0px;
+
+  border-bottom: 1px var(--border) dashed;
+}
+
+.header_title_alt {
+  font-size: var(--text-4xl);
+  /* font-family: var(--heading); */
+  font-family: var(--heading-2);
+  text-transform: uppercase;
+  margin: 0px;
+  padding: 0px;
+
+  border-bottom: 1px rgba(0, 0, 0, 0) dashed;
+}
+
+.header_description {
+  max-width: 600px;
+}
