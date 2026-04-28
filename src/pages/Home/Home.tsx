@@ -5,7 +5,6 @@ import {
   motion,
   useTransform,
   useSpring,
-  AnimatePresence,
 } from 'framer-motion';
 
 // Styles
@@ -70,7 +69,7 @@ export function Header() {
     <header ref={wrapperRef} className={header.wrapper}>
       <div className={header.banner_wrapper}>
         <motion.img
-          src="./banner.png"
+          src="./banner.webp"
           className={header.banner_image}
           style={{ y: bgY, scale: bgScale }}
         />
@@ -331,7 +330,7 @@ export function Location() {
             className={location.map}
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m33065846.996603268!2d14.01953455372328!3d51.85169458840864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47aa858778023fdf%3A0xb1094cb70a86f2ec!2sU%20Czecha!5e0!3m2!1spl!2spl!4v1777376388530!5m2!1spl!2spl"
             allowFullScreen={false}
-            loading="lazy"
+            loading="eager"
             referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
