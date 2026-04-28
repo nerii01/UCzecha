@@ -1,0 +1,169 @@
+#root {
+  /* ── Fonty ─────────────────────────────────────── */
+  --sans: "DM Sans", sans-serif;
+  --heading: "Lora", Georgia, serif;
+  --mono: ui-monospace, Consolas, monospace;
+  /* ── Ramp: Sand ────────────────────────────────── */
+  --sand-50: #fbf8f3;
+  --sand-100: #f5f0e6;
+  --sand-200: #ede3d0;
+  --sand-400: #c9a87c;
+  --sand-600: #9e7a50;
+  --sand-800: #6b4f2f;
+  --sand-900: #3d2a12;
+
+  /* ── Ramp: Ocean ───────────────────────────────── */
+  --ocean-50: #e8f4f9;
+  --ocean-100: #c0dff0;
+  --ocean-200: #8fc5e3;
+  --ocean-400: #2e9bc2;
+  --ocean-600: #1a6b8a;
+  --ocean-800: #0d4057;
+  --ocean-900: #062535;
+
+  /* ── Ramp: Coral ───────────────────────────────── */
+  --coral-50: #fef0ec;
+  --coral-100: #fac9b8;
+  --coral-200: #f5a086;
+  --coral-400: #e0613d;
+  --coral-600: #b0402a;
+  --coral-800: #7a2a19;
+  --coral-900: #4d190e;
+
+  /* ── Ramp: Seafoam ─────────────────────────────── */
+  --seafoam-50: #e6f5f1;
+  --seafoam-100: #b8e2d6;
+  --seafoam-200: #84ccba;
+  --seafoam-400: #35a98e;
+  --seafoam-600: #1e7a65;
+  --seafoam-800: #0f4d40;
+  --seafoam-900: #073028;
+
+  /* ── Ramp: Neutral ─────────────────────────────── */
+  --neutral-50: #f9f6f2;
+  --neutral-100: #ede8e0;
+  --neutral-200: #d5cec3;
+  --neutral-400: #a09890;
+  --neutral-600: #706860;
+  --neutral-800: #3d3730;
+  --neutral-900: #221e18;
+
+  /* ── Semantic: tła ─────────────────────────────── */
+  --bg: var(--sand-100); /* tło całej strony za page */
+  --bg-page: var(--sand-200); /* kontener max-w 1100px    */
+  --bg-section: var(--ocean-900); /* sekcja z tłem (co druga) */
+  --bg-card: #ffffff;
+
+  /* ── Semantic: tekst ───────────────────────────── */
+  --text: var(--neutral-900);
+  --text-muted: var(--neutral-600);
+  --text-hint: var(--neutral-400);
+  --text-on-dark: #ffffff;
+
+  /* ── Semantic: akcenty ─────────────────────────── */
+  --accent: var(--ocean-600); /* linki, przyciski główne */
+  --accent-hover: var(--ocean-800);
+  --accent-light: var(--ocean-50);
+  --accent-2: var(--coral-600); /* CTA, highlights, badge  */
+  --accent-2-hover: var(--coral-800);
+  --accent-2-light: var(--coral-50);
+  --accent-3: var(--seafoam-600); /* tagi, statusy           */
+  --accent-3-light: var(--seafoam-50);
+
+  /* ── Semantic: krawędzie ───────────────────────── */
+  --border: rgba(61, 55, 48, 0.12);
+  --border-strong: rgba(61, 55, 48, 0.28);
+
+  /* ── Layout ────────────────────────────────────── */
+  --padding: 20px;
+  --page-max-w: 1100px;
+  --container-px: clamp(1rem, 5vw, 2.5rem);
+  --section-py: clamp(3rem, 8vw, 6rem);
+  --gap-sm: 0.75rem;
+  --gap: 1.5rem;
+  --gap-lg: 3rem;
+
+  /* ── Zaokrąglenia ──────────────────────────────── */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* ── Skala typografii (base = 18px) ────────────── */
+  --text-xs: 0.722rem; /* ~13px */
+  --text-sm: 0.833rem; /* ~15px */
+  --text-base: 1rem; /*  18px */
+  --text-lg: 1.111rem; /*  20px */
+  --text-xl: 1.333rem; /*  24px */
+  --text-2xl: 1.667rem; /*  30px */
+  --text-3xl: 2.111rem; /*  38px */
+  --text-4xl: 2.667rem; /*  48px */
+  --text-5xl: 3.556rem; /*  64px */
+
+  /* ── Grubości fontu ────────────────────────────── */
+  --w-normal: 400;
+  --w-medium: 500;
+  --w-semi: 600;
+  --w-bold: 700;
+
+  /* ── Przejścia ─────────────────────────────────── */
+  --ease: 200ms ease;
+  --ease-slow: 400ms ease;
+
+  /* ── Cienie ────────────────────────────────────── */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.18);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.28);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.65);
+
+  /* ── Reset globalny ────────────────────────────── */
+  font: var(--text-base) / 1.45 var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* ── Width height ────────────────────────────── */
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  background-color: #f5ead3b3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='20'%3E%3Cpath d='M0 10 Q20 4 40 10 Q60 16 80 10' stroke='%23C9A87C' stroke-width='1' fill='none' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 80px 20px;
+}
+
+/* ── Wrapper strony ─────────────────────────────── */
+.page {
+  width: 100%;
+  height: 100%;
+  max-width: var(--page-max-w);
+  background: var(--bg-page);
+  position: relative;
+}
+
+/* ── Sekcje ─────────────────────────────────────── */
+.section {
+  padding: var(--padding);
+  box-sizing: border-box;
+}
+.section.alt {
+  color: var(--text-on-dark);
+  background: var(--bg-section);
+}

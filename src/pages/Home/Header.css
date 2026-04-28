@@ -1,0 +1,129 @@
+/* ----------------- Wrapper */
+.home_header_banner_wrapper {
+  position: relative;
+  width: 100%;
+  height: 102svh;
+  overflow: hidden;
+
+  display: flex;
+  z-index: 1;
+
+  background: url("/banner.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.home_header_banner_wrapper::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 20%, transparent);
+  backdrop-filter: blur(2px);
+
+  mask-image: linear-gradient(90deg, white, transparent);
+}
+
+.home_header_banner_wrapper::after {
+  bottom: 0px;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2svh;
+  background: var(--bg-page);
+  mask-image: linear-gradient(180deg, transparent 0%, rgb(255, 255, 255));
+}
+
+/*  ----------------- Logo */
+.home_header_logo {
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.home_header_logo span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-on-dark);
+  text-shadow: 0 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.home_header_logo span:nth-child(2) {
+  font-size: var(--text-xl);
+  font-weight: var(--w-semi);
+}
+
+.home_header_logo span:nth-child(3) {
+  padding: 0px;
+  font-size: var(--text-xs);
+  letter-spacing: 0.15em;
+}
+
+/* ----------------- CTA */
+.home_header_CTA {
+  width: 90%;
+  max-width: 350px;
+  left: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: absolute;
+  place-self: center;
+  gap: 10px;
+
+  color: var(--text-on-dark);
+
+  padding: 15px;
+  border-radius: var(--radius-lg);
+  box-sizing: border-box;
+}
+
+.home_header_CTA h1 {
+  margin: 0px;
+  padding: 0px;
+  text-transform: uppercase;
+
+  font-family: var(--heading);
+  font-size: var(--text-4xl);
+}
+
+.home_header_CTA p {
+  margin: 0px;
+  padding: 0px;
+  max-width: 250px;
+
+  font-weight: var(--w-semi);
+}
+
+.home_header_CTA button {
+  font-size: var(--text-xl);
+  margin: 0px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: var(--w-semi);
+
+  background: var(--sand-400);
+  color: #3d2a12;
+  border: none;
+  border-radius: var(--radius-md);
+}
