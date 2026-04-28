@@ -1,12 +1,19 @@
 import { Anchor, MoveUpRight, Star } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
+import {
+  useScroll,
+  motion,
+  useTransform,
+  useSpring,
+  AnimatePresence,
+} from 'framer-motion';
 
 // Styles
 import meetus from './styles/meetus.module.css';
 import location from './styles/location.module.css';
 import header from './styles/header.module.css';
 import menu from './styles/menu.module.css';
+import languagechanger from './styles/languagechanger.module.css';
 import reviews from './styles/reviews.module.css';
 import footer from './styles/footer.module.css';
 import shared from '../../styles/shared.module.css';
@@ -15,9 +22,8 @@ import shared from '../../styles/shared.module.css';
 import { Section } from '../../components/Layout/Section';
 
 // Translations
-import { translations } from '../../data/translations';
-
-const lang = 'pl';
+import { translations, type Lang } from '../../data/translations';
+import { useLanguage } from '../../context/LangContext';
 
 function scrollInto({ id }: { id: string }) {
   console.log(id);
@@ -27,19 +33,25 @@ function scrollInto({ id }: { id: string }) {
 
 export default function Home() {
   return (
-    <div className="page">
-      <Header />
-      <MeetUs />
-      <Menu />
-      <Location />
-      <Ratings />
-      <Footer />
-    </div>
+    <>
+      <div className="page">
+        <Header />
+        <MeetUs />
+        <Menu />
+        <Location />
+        <Ratings />
+        <Footer />
+      </div>
+      <LanguageChanger />
+    </>
   );
 }
 
 // HEADER ----- DONE / TRANSLATION TODO
 export function Header() {
+  const { lang } = useLanguage();
+  const localization = translations[lang].header;
+
   // Background animation
   const wrapperRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -66,11 +78,8 @@ export function Header() {
           <HeaderLogo />
         </div>
         <motion.div className={header.cta} style={{ y: smoothY }}>
-          <h1>U CZECHA </h1>
-          <p>
-            Świeże ryby, tradycyjna kuchnia polska i rodzinna atmosfera w sercu
-            Międzywodzia
-          </p>
+          <h1>{localization.title}</h1>
+          <p>{localization.description}</p>
           <motion.button
             whileHover={{
               scale: 1.05,
@@ -80,7 +89,7 @@ export function Header() {
             onClick={() => {
               scrollInto({ id: 'menu' });
             }}>
-            ZOBACZ MENU <Anchor />
+            {localization.cta} <Anchor />
           </motion.button>
         </motion.div>
       </div>
@@ -101,10 +110,11 @@ export function HeaderLogo() {
 
 // MEET US
 export function MeetUs() {
+  const { lang } = useLanguage();
   const localization = translations[lang].meetUs;
   return (
     // Wrapper
-    <Section id="about" alt={'alt'} viewport={{ amount: 0.75 }}>
+    <Section id="about" alt={'alt'} viewport={{ amount: 0.3 }}>
       {/* Header */}
       <h1 className={shared.header_title}>{localization.label}</h1>
       <p className={shared.header_description}>{localization.description}</p>
@@ -134,6 +144,8 @@ export function MeetUs() {
 
 // MENU
 export function Menu() {
+  const { lang } = useLanguage();
+
   const [currentSection, setCurrentSection] = useState<string>();
 
   const localization = translations[lang].menu;
@@ -199,7 +211,7 @@ export function Menu() {
   }
 
   return (
-    <Section id="menu" viewport={{ amount: 0.5 }}>
+    <Section id="menu" viewport={{ amount: 0.3 }}>
       {/* Title */}
       <h1 className={shared.header_title_alt}>{localization.label}</h1>
 
@@ -281,10 +293,12 @@ export function Menu() {
 
 // LOCATION
 export function Location() {
+  const { lang } = useLanguage();
+
   const localization = translations[lang].location;
   const info = [localization.address, localization.hours];
   return (
-    <Section id="location" alt={'alt'}>
+    <Section id="location" alt={'alt'} viewport={{ amount: 0.3 }}>
       <h1 className={shared.header_title}>{localization.label}</h1>
 
       {/* Location Grid */}
@@ -328,9 +342,11 @@ export function Location() {
 
 // RATINGS
 export function Ratings() {
+  const { lang } = useLanguage();
+
   const localization = translations[lang].ratings;
   return (
-    <Section id="ratings">
+    <Section id="ratings" viewport={{ amount: 0.3 }}>
       <h1 className={shared.header_title}>{localization.label}</h1>
 
       <div className={reviews.wrapper}>
@@ -366,10 +382,12 @@ export function Ratings() {
 
 // FOOTER
 export function Footer() {
+  const { lang } = useLanguage();
+
   const localization = translations[lang].footer;
 
   return (
-    <Section viewport={{ amount: 0.25 }} alt={'alt'}>
+    <Section viewport={{ amount: 0.3 }} alt={'alt'}>
       <div className={footer.wrapper}>
         <div className={footer.logo}>
           <HeaderLogo />
@@ -396,5 +414,47 @@ export function Footer() {
         </p>
       </div>
     </Section>
+  );
+}
+
+export function LanguageChanger() {
+  const languages: Lang[] = ['pl', 'en', 'de'];
+  const { lang, setLang } = useLanguage();
+
+  const [open, setOpen] = useState<boolean>(false);
+
+  return (
+    <motion.div
+      className={languagechanger.wrapper}
+      tabIndex={0}
+      onClick={() => !open && setOpen(true)}
+      onBlur={(e) => {
+        const next = e.relatedTarget as Node | null;
+        if (next && e.currentTarget.contains(next)) return;
+
+        setOpen(false);
+      }}>
+      <div className={languagechanger.flag_wrapper}>
+        <img className={languagechanger.flag} src={`./${lang}.png`} />
+      </div>
+
+      {open &&
+        languages
+          .filter((el) => {
+            return el != lang;
+          })
+          .map((lang) => {
+            return (
+              <div
+                className={languagechanger.flag_wrapper}
+                onClick={() => {
+                  setLang(lang);
+                  setOpen(false);
+                }}>
+                <img className={languagechanger.flag} src={`./${lang}.png`} />
+              </div>
+            );
+          })}
+    </motion.div>
   );
 }
