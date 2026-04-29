@@ -117,248 +117,188 @@ export const translations: Record<Lang, Translations> = {
       label: 'Menu',
       tabs: [
         {
-          id: 'fish',
-          label: 'Ryby i owoce morza',
-          items: [
-            {
-              title: 'Dorsz smażony',
-              description:
-                'Świeży dorsz bałtycki w panierce, podawany z frytkami i surówką',
-              price: 42,
-            },
-            {
-              title: 'Łosoś z grilla',
-              description:
-                'Filet z łososia z grilla z masłem ziołowym i warzywami sezonowymi',
-              price: 52,
-            },
-            {
-              title: 'Krewetki czosnkowe',
-              description:
-                'Krewetki tygryse smażone na maśle z czosnkiem i pietruszką',
-              price: 48,
-            },
-            {
-              title: 'Halibut pieczony',
-              description:
-                'Halibut pieczony z cytryną i koperkiem, podawany z puree ziemniaczanym',
-              price: 58,
-            },
-            {
-              title: 'Śledź po kaszubsku',
-              description: 'Śledź marynowany z cebulą i jabłkiem w śmietanie',
-              price: 28,
-            },
-            {
-              title: 'Sandacz smażony',
-              description:
-                'Filet z sandacza w złocistej panierce z sosem tatarskim',
-              price: 54,
-            },
-            {
-              title: 'Kalmary z grilla',
-              description:
-                'Kalmary z grilla z oliwą, czosnkiem i chili, podawane z pieczywem',
-              price: 46,
-            },
-            {
-              title: 'Flądra z pieca',
-              description: 'Całą flądra pieczona w ziołach z masłem i cytryną',
-              price: 44,
-            },
-            {
-              title: 'Ryba po grecku',
-              description:
-                'Smażona ryba w marynacie warzywnej, podawana na zimno',
-              price: 32,
-            },
-            {
-              title: 'Talerz rybny',
-              description: 'Zestaw trzech rodzajów ryb z frytkami i surówkami',
-              price: 68,
-            },
-          ],
-        },
-        {
-          id: 'soup',
+          id: 'soups',
           label: 'Zupy',
           items: [
             {
-              title: 'Zupa rybna',
+              title: 'Rosół',
               description:
-                'Tradycyjna zupa z ryb bałtyckich z warzywami i koperkiem',
-              price: 22,
+                'Klasyczna zupa na wywarze drobiowym z makaronem i warzywami.',
+              price: 15,
             },
             {
-              title: 'Żurek',
+              title: 'Pomidorowa',
               description:
-                'Żurek na zakwasie z jajkiem, kiełbasą i ziemniakami',
-              price: 18,
+                'Zupa na bazie pomidorów, podawana z ryżem lub makaronem.',
+              price: 15,
             },
             {
-              title: 'Krem z dyni',
-              description: 'Aksamitny krem z dyni z pestkami i olejem z dyni',
+              title: 'Rybna',
+              description:
+                'Zupa z wywaru rybnego z dodatkiem warzyw i przypraw.',
               price: 20,
             },
             {
-              title: 'Barszcz czerwony',
-              description: 'Klasyczny barszcz z uszkami z farszem grzybowym',
-              price: 18,
-            },
-            {
-              title: 'Rosół domowy',
-              description: 'Rosół z kury na warzywach z makaronem i koperkiem',
-              price: 16,
-            },
-            {
-              title: 'Zupa pomidorowa',
-              description: 'Kremowa zupa pomidorowa z ryżem i świeżą bazylią',
-              price: 16,
+              title: 'Cebulowa',
+              description: 'Zupa z duszonej cebuli.',
+              price: 15,
             },
             {
               title: 'Chłodnik',
               description:
-                'Chłodnik litewski z botwinką, ogórkiem i jajkiem — sezonowy',
+                'Zimna zupa na bazie jogurtu i buraków z dodatkiem warzyw.',
               price: 20,
             },
             {
-              title: 'Zupa grzybowa',
-              description: 'Zupa z leśnych grzybów z łazankami i śmietaną',
-              price: 22,
+              title: 'Barszcz ukraiński',
+              description:
+                'Gęsta zupa z buraków, warzyw i fasoli, doprawiona ziołami.',
+              price: 15,
             },
             {
-              title: 'Zupa cebulowa',
-              description: 'Francuska zupa cebulowa z grzanką i serem gruyère',
-              price: 24,
-            },
-            {
-              title: 'Minestrone',
-              description: 'Włoska zupa warzywna z makaronem i parmezanem',
+              title: 'Flaki',
+              description:
+                'Tradycyjna zupa z wołowych flaków z majerankiem i warzywami.',
               price: 20,
             },
           ],
         },
         {
-          id: 'meals',
-          label: 'Dania mięsne',
+          id: 'mains',
+          label: 'Dania główne',
           items: [
             {
-              title: 'Kotlet schabowy',
+              title: 'Flądra',
               description:
-                'Tradycyjny schabowy z ziemniakami i kapustą zasmażaną',
-              price: 38,
+                '13 zł/100 g ryby + 5 zł jeden z dodatków (frytki, surówka)',
+              price: 13,
             },
             {
-              title: 'Karkówka z grilla',
+              title: 'Gładzica',
               description:
-                'Karkówka marynowana w ziołach z grilla, podawana z ziemniakami',
-              price: 44,
+                '15 zł/100 g ryby + 5 zł jeden z dodatków (frytki, surówka)',
+              price: 15,
             },
             {
-              title: 'Gulasz wołowy',
-              description:
-                'Gulasz z wołowiny duszony z warzywami, podawany z kaszą',
+              title: 'Dorsz',
+              description: '200 g z frytkami i surówkami',
+              price: 45,
+            },
+            {
+              title: 'Sandacz',
+              description: '200 g z frytkami i surówkami',
+              price: 50,
+            },
+            {
+              title: 'Pstrąg smażony',
+              description: '350 g z frytkami i surówkami',
               price: 46,
             },
             {
-              title: 'Pierś z kurczaka',
-              description:
-                'Grillowana pierś z kurczaka z sosem ziołowym i warzywami',
-              price: 36,
-            },
-            {
-              title: 'Żeberka BBQ',
-              description:
-                'Żeberka wieprzowe w sosie BBQ pieczone przez 4 godziny',
-              price: 52,
-            },
-            {
-              title: 'Polędwiczki wieprzowe',
-              description:
-                'Polędwiczki w sosie śmietanowym z pieczarkami i kaszą',
+              title: 'Halibut pieczony',
+              description: '200 g z frytkami i surówkami',
               price: 48,
             },
             {
-              title: 'Kaczka pieczona',
-              description: 'Ćwiartka kaczki z jabłkami i modrą kapustą',
-              price: 58,
+              title: 'Łosoś pieczony',
+              description: '200 g z frytkami i surówkami',
+              price: 48,
             },
             {
-              title: 'Wołowina po burgundzku',
+              title: 'Karmazyn smażony',
               description:
-                'Wołowina duszona w czerwonym winie z warzywami korzeniowymi',
-              price: 62,
+                '13 zł/100 g ryby + 5 zł jeden z dodatków (frytki, surówka)',
+              price: 13,
             },
             {
-              title: 'Sznycel wiedeński',
+              title: 'Schabowy',
               description:
-                'Cienki sznycel z cielęciny w panierce z kaparami i cytryną',
-              price: 54,
+                '140 g z ziemniakami lub frytkami i kapustą zasmażaną lub surówkami',
+              price: 35,
             },
             {
-              title: 'Gołąbki domowe',
-              description:
-                'Gołąbki z mięsem i ryżem w sosie pomidorowym, jak u babci',
-              price: 34,
+              title: 'Wątróbka drobiowa smażona',
+              description: 'Z ziemniakami i surówkami',
+              price: 35,
+            },
+            {
+              title: 'Filet panierowany z kurczaka',
+              description: '130 g z ziemniakami lub frytkami i surówkami',
+              price: 35,
+            },
+            {
+              title: 'Karkówka grillowana',
+              description: '180 g z ziemniakami lub frytkami i surówkami',
+              price: 38,
+            },
+            {
+              title: 'Filet grillowany z kurczaka',
+              description: 'Z ziemniakami lub frytkami i surówkami',
+              price: 38,
+            },
+            {
+              title: 'Placek po węgiersku',
+              description: 'Ze śmietaną',
+              price: 45,
+            },
+            {
+              title: 'Golonka wieprzowa',
+              description: 'Z kapustą zasmażaną',
+              price: 50,
+            },
+            {
+              title: 'Kotlet mielony',
+              description: '200 g z ziemniakami i surówkami',
+              price: 30,
+            },
+            {
+              title: 'Gulasz węgierski',
+              description: 'Z kluskami śląskimi i surówką',
+              price: 45,
+            },
+            {
+              title: 'Roladka z kurczaka faszerowana',
+              description: 'Z ziemniakami i surówkami',
+              price: 45,
+            },
+            {
+              title: 'Żeberko w sosie własnym',
+              description: 'Z kluskami śląskimi i surówkami',
+              price: 45,
             },
           ],
         },
         {
-          id: 'dessert',
-          label: 'Desery',
+          id: 'flour',
+          label: 'Z ciasta',
           items: [
             {
-              title: 'Sernik klasyczny',
-              description: 'Domowy sernik wiedeński z sosem truskawkowym',
-              price: 18,
-            },
-            {
-              title: 'Szarlotka',
-              description: 'Ciepła szarlotka z cynamonem i lodami waniliowymi',
-              price: 16,
-            },
-            {
-              title: 'Lody rzemieślnicze',
-              description:
-                'Trzy gałki lodów od lokalnego lodziarza, sezonowe smaki',
-              price: 14,
-            },
-            {
-              title: 'Tiramisu',
-              description: 'Klasyczne tiramisu z mascarpone i espresso',
+              title: 'Placki ziemniaczane',
+              description: '3 szt. ze śmietaną',
               price: 20,
             },
             {
-              title: 'Panna cotta',
-              description: 'Panna cotta z sosem malinowym i świeżymi owocami',
-              price: 18,
-            },
-            {
-              title: 'Brownie',
-              description: 'Ciepłe brownie czekoladowe z lodami waniliowymi',
-              price: 16,
-            },
-            {
-              title: 'Naleśniki',
+              title: 'Pierogi',
               description:
-                'Naleśniki z twarogiem i rodzynkami, polane śmietaną',
-              price: 18,
+                'Informacja u obsługi – dostępne rodzaje zmieniają się codziennie',
+              price: 30,
             },
+          ],
+        },
+        {
+          id: 'salads',
+          label: 'Sałatki',
+          items: [
             {
-              title: 'Makowiec',
-              description: 'Domowy makowiec z lukrem i skórką pomarańczową',
-              price: 14,
-            },
-            {
-              title: 'Crème brûlée',
+              title: 'Sałatka',
               description:
-                'Klasyczny crème brûlée z karmelizowanym cukrem i wanilią',
-              price: 22,
+                'Z wątróbką drobiową, serem pleśniowym, orzechami i owocami, z sosem musztardowo-miodowym',
+              price: 38,
             },
             {
-              title: 'Owoce sezonowe',
-              description: 'Świeże owoce z bitą śmietaną i miętą',
-              price: 16,
+              title: 'Sałatka Cezar',
+              description: 'Z grillowanym kurczakiem',
+              price: 38,
             },
           ],
         },
@@ -455,251 +395,187 @@ export const translations: Record<Lang, Translations> = {
     },
     menu: {
       label: 'Menu',
+
       tabs: [
         {
-          id: 'fish',
-          label: 'Fish & seafood',
-          items: [
-            {
-              title: 'Fried cod',
-              description:
-                'Fresh Baltic cod in breadcrumbs, served with fries and coleslaw',
-              price: 42,
-            },
-            {
-              title: 'Grilled salmon',
-              description:
-                'Salmon fillet from the grill with herb butter and seasonal vegetables',
-              price: 52,
-            },
-            {
-              title: 'Garlic shrimp',
-              description:
-                'Tiger shrimp fried in butter with garlic and parsley',
-              price: 48,
-            },
-            {
-              title: 'Baked halibut',
-              description:
-                'Halibut baked with lemon and dill, served with mashed potatoes',
-              price: 58,
-            },
-            {
-              title: 'Kashubian herring',
-              description: 'Marinated herring with onion and apple in cream',
-              price: 28,
-            },
-            {
-              title: 'Fried pike-perch',
-              description:
-                'Pike-perch fillet in golden breadcrumbs with tartar sauce',
-              price: 54,
-            },
-            {
-              title: 'Grilled calamari',
-              description:
-                'Grilled calamari with olive oil, garlic and chili, served with bread',
-              price: 46,
-            },
-            {
-              title: 'Oven-baked flounder',
-              description: 'Whole flounder baked with herbs, butter and lemon',
-              price: 44,
-            },
-            {
-              title: 'Greek-style fish',
-              description: 'Fried fish in a vegetable marinade, served cold',
-              price: 32,
-            },
-            {
-              title: 'Fish platter',
-              description:
-                'A selection of three types of fish with fries and salads',
-              price: 68,
-            },
-          ],
-        },
-        {
-          id: 'soup',
+          id: 'soups',
           label: 'Soups',
           items: [
             {
-              title: 'Fish soup',
-              description:
-                'Traditional Baltic fish soup with vegetables and dill',
-              price: 22,
+              title: 'Chicken Broth',
+              description: 'Classic chicken broth with noodles and vegetables.',
+              price: 15,
             },
             {
-              title: 'Sour rye soup',
-              description: 'Sour rye soup with egg, sausage and potatoes',
-              price: 18,
+              title: 'Tomato Soup',
+              description: 'Tomato-based soup served with rice or noodles.',
+              price: 15,
             },
             {
-              title: 'Pumpkin cream soup',
-              description:
-                'Velvety pumpkin cream soup with seeds and pumpkin oil',
+              title: 'Fish Soup',
+              description: 'Fish broth soup with vegetables and spices.',
               price: 20,
             },
             {
-              title: 'Red borscht',
+              title: 'Onion Soup',
+              description: 'Slow-cooked onion soup.',
+              price: 15,
+            },
+            {
+              title: 'Cold Beet Soup',
               description:
-                'Classic borscht with dumplings stuffed with mushrooms',
-              price: 18,
-            },
-            {
-              title: 'Home-style broth',
-              description: 'Chicken broth with vegetables, noodles and dill',
-              price: 16,
-            },
-            {
-              title: 'Tomato soup',
-              description: 'Creamy tomato soup with rice and fresh basil',
-              price: 16,
-            },
-            {
-              title: 'Cold beet soup',
-              description:
-                'Lithuanian cold beet soup with cucumber and egg — seasonal',
+                'Cold yogurt and beetroot soup with fresh vegetables.',
               price: 20,
             },
             {
-              title: 'Mushroom soup',
-              description: 'Wild mushroom soup with pasta and sour cream',
-              price: 22,
+              title: 'Ukrainian Borscht',
+              description:
+                'Hearty beetroot soup with vegetables and beans, seasoned with herbs.',
+              price: 15,
             },
             {
-              title: 'Onion soup',
-              description: 'French onion soup with crouton and gruyère cheese',
-              price: 24,
-            },
-            {
-              title: 'Minestrone',
-              description: 'Italian vegetable soup with pasta and parmesan',
+              title: 'Tripe Soup',
+              description:
+                'Traditional beef tripe soup with marjoram and vegetables.',
               price: 20,
             },
           ],
         },
         {
-          id: 'meals',
-          label: 'Meat dishes',
+          id: 'mains',
+          label: 'Main Courses',
           items: [
             {
-              title: 'Pork cutlet',
+              title: 'Flounder',
               description:
-                'Traditional pork cutlet with potatoes and sautéed cabbage',
-              price: 38,
+                '13 PLN/100 g of fish + 5 PLN for one side (fries or coleslaw)',
+              price: 13,
             },
             {
-              title: 'Grilled pork neck',
+              title: 'Plaice',
               description:
-                'Herb-marinated pork neck from the grill, served with potatoes',
-              price: 44,
+                '15 PLN/100 g of fish + 5 PLN for one side (fries or coleslaw)',
+              price: 15,
             },
             {
-              title: 'Beef goulash',
-              description:
-                'Beef goulash braised with vegetables, served with buckwheat',
+              title: 'Cod',
+              description: '200 g with fries and coleslaw',
+              price: 45,
+            },
+            {
+              title: 'Pikeperch',
+              description: '200 g with fries and coleslaw',
+              price: 50,
+            },
+            {
+              title: 'Fried Trout',
+              description: '350 g with fries and coleslaw',
               price: 46,
             },
             {
-              title: 'Chicken breast',
-              description:
-                'Grilled chicken breast with herb sauce and vegetables',
-              price: 36,
-            },
-            {
-              title: 'BBQ ribs',
-              description: 'Pork ribs in BBQ sauce slow-cooked for 4 hours',
-              price: 52,
-            },
-            {
-              title: 'Pork tenderloin',
-              description:
-                'Tenderloin in cream sauce with mushrooms and buckwheat',
+              title: 'Baked Halibut',
+              description: '200 g with fries and coleslaw',
               price: 48,
             },
             {
-              title: 'Roast duck',
-              description: 'Duck quarter with apples and red cabbage',
-              price: 58,
+              title: 'Baked Salmon',
+              description: '200 g with fries and coleslaw',
+              price: 48,
             },
             {
-              title: 'Beef bourguignon',
-              description: 'Beef braised in red wine with root vegetables',
-              price: 62,
-            },
-            {
-              title: 'Wiener schnitzel',
+              title: 'Fried Redfish',
               description:
-                'Thin veal schnitzel in breadcrumbs with capers and lemon',
-              price: 54,
+                '13 PLN/100 g of fish + 5 PLN for one side (fries or coleslaw)',
+              price: 13,
             },
             {
-              title: 'Home-style cabbage rolls',
+              title: 'Pork Schnitzel',
               description:
-                'Cabbage rolls with meat and rice in tomato sauce, just like grandma made',
-              price: 34,
+                '140 g with potatoes or fries and sautéed cabbage or coleslaw',
+              price: 35,
+            },
+            {
+              title: 'Fried Chicken Liver',
+              description: 'With potatoes and coleslaw',
+              price: 35,
+            },
+            {
+              title: 'Breaded Chicken Fillet',
+              description: '130 g with potatoes or fries and coleslaw',
+              price: 35,
+            },
+            {
+              title: 'Grilled Pork Neck',
+              description: '180 g with potatoes or fries and coleslaw',
+              price: 38,
+            },
+            {
+              title: 'Grilled Chicken Fillet',
+              description: 'With potatoes or fries and coleslaw',
+              price: 38,
+            },
+            {
+              title: 'Hungarian-style Potato Pancake',
+              description: 'With sour cream',
+              price: 45,
+            },
+            {
+              title: 'Pork Knuckle',
+              description: 'With sautéed cabbage',
+              price: 50,
+            },
+            {
+              title: 'Minced Meat Cutlet',
+              description: '200 g with potatoes and coleslaw',
+              price: 30,
+            },
+            {
+              title: 'Hungarian Goulash',
+              description: 'With Silesian dumplings and coleslaw',
+              price: 45,
+            },
+            {
+              title: 'Stuffed Chicken Roll',
+              description: 'With potatoes and coleslaw',
+              price: 45,
+            },
+            {
+              title: 'Pork Ribs in Own Sauce',
+              description: 'With Silesian dumplings and coleslaw',
+              price: 45,
             },
           ],
         },
         {
-          id: 'dessert',
-          label: 'Desserts',
+          id: 'flour',
+          label: 'From the Dough',
           items: [
             {
-              title: 'Classic cheesecake',
-              description:
-                'Home-made Viennese cheesecake with strawberry sauce',
-              price: 18,
-            },
-            {
-              title: 'Apple pie',
-              description: 'Warm apple pie with cinnamon and vanilla ice cream',
-              price: 16,
-            },
-            {
-              title: 'Artisan ice cream',
-              description:
-                'Three scoops from a local ice cream maker, seasonal flavours',
-              price: 14,
-            },
-            {
-              title: 'Tiramisu',
-              description: 'Classic tiramisu with mascarpone and espresso',
+              title: 'Potato Pancakes',
+              description: '3 pcs with sour cream',
               price: 20,
             },
             {
-              title: 'Panna cotta',
-              description: 'Panna cotta with raspberry sauce and fresh fruit',
-              price: 18,
+              title: 'Dumplings',
+              description: 'Ask the staff – available types change daily',
+              price: 30,
             },
+          ],
+        },
+        {
+          id: 'salads',
+          label: 'Salads',
+          items: [
             {
-              title: 'Brownie',
-              description: 'Warm chocolate brownie with vanilla ice cream',
-              price: 16,
-            },
-            {
-              title: 'Crêpes',
+              title: 'House Salad',
               description:
-                'Crêpes with cottage cheese and raisins, drizzled with sour cream',
-              price: 18,
+                'With chicken liver, blue cheese, walnuts, fruit and honey-mustard dressing',
+              price: 38,
             },
             {
-              title: 'Poppy seed roll',
-              description:
-                'Home-made poppy seed roll with icing and orange zest',
-              price: 14,
-            },
-            {
-              title: 'Crème brûlée',
-              description:
-                'Classic crème brûlée with caramelised sugar and vanilla',
-              price: 22,
-            },
-            {
-              title: 'Seasonal fruit',
-              description: 'Fresh fruit with whipped cream and mint',
-              price: 16,
+              title: 'Caesar Salad',
+              description: 'With grilled chicken',
+              price: 38,
             },
           ],
         },
@@ -778,7 +654,7 @@ export const translations: Record<Lang, Translations> = {
       badges: [
         { label: '26', content: 'Jahre am Meer', Icon: Sun },
         { label: '100%', content: 'Frische', Icon: Fish },
-        { label: '4,6', content: 'Durchschnittsbewertung', Icon: Star },
+        { label: '4,6', content: 'bedeuten', Icon: Star },
       ],
     },
     location: {
@@ -798,249 +674,180 @@ export const translations: Record<Lang, Translations> = {
       label: 'Speisekarte',
       tabs: [
         {
-          id: 'fish',
-          label: 'Fisch & Meeresfrüchte',
-          items: [
-            {
-              title: 'Gebratener Kabeljau',
-              description:
-                'Frischer Ostseekabeljau in Panade, serviert mit Pommes und Krautsalat',
-              price: 42,
-            },
-            {
-              title: 'Gegrillter Lachs',
-              description:
-                'Lachsfilet vom Grill mit Kräuterbutter und Saisongemüse',
-              price: 52,
-            },
-            {
-              title: 'Knoblauch-Garnelen',
-              description:
-                'Tigergarnelen in Butter mit Knoblauch und Petersilie gebraten',
-              price: 48,
-            },
-            {
-              title: 'Gebackener Heilbutt',
-              description:
-                'Heilbutt mit Zitrone und Dill gebacken, serviert mit Kartoffelpüree',
-              price: 58,
-            },
-            {
-              title: 'Kaschubischer Hering',
-              description: 'Marinierter Hering mit Zwiebel und Apfel in Sahne',
-              price: 28,
-            },
-            {
-              title: 'Gebratener Zander',
-              description: 'Zanderfilet in goldener Panade mit Tatarsoße',
-              price: 54,
-            },
-            {
-              title: 'Gegrillte Calamari',
-              description:
-                'Calamari vom Grill mit Olivenöl, Knoblauch und Chili, serviert mit Brot',
-              price: 46,
-            },
-            {
-              title: 'Ofenflunder',
-              description:
-                'Ganze Flunder mit Kräutern, Butter und Zitrone gebacken',
-              price: 44,
-            },
-            {
-              title: 'Fisch auf griechische Art',
-              description: 'Gebratener Fisch in Gemüsemarinade, kalt serviert',
-              price: 32,
-            },
-            {
-              title: 'Fischteller',
-              description:
-                'Auswahl von drei Fischsorten mit Pommes und Beilagensalaten',
-              price: 68,
-            },
-          ],
-        },
-        {
-          id: 'soup',
+          id: 'soups',
           label: 'Suppen',
           items: [
             {
-              title: 'Fischsuppe',
-              description:
-                'Traditionelle Ostsee-Fischsuppe mit Gemüse und Dill',
-              price: 22,
-            },
-            {
-              title: 'Sauerroggensuppe',
-              description: 'Sauerroggensuppe mit Ei, Wurst und Kartoffeln',
-              price: 18,
-            },
-            {
-              title: 'Kürbiscremesuppe',
-              description:
-                'Samtige Kürbiscremesuppe mit Kernen und Kürbiskernöl',
-              price: 20,
-            },
-            {
-              title: 'Rote Borschtsch',
-              description: 'Klassische Borschtsch mit Pilzteigtaschen',
-              price: 18,
-            },
-            {
-              title: 'Hausgemachte Brühe',
-              description: 'Hühnerbrühe mit Gemüse, Nudeln und Dill',
-              price: 16,
+              title: 'Hühnerbrühe',
+              description: 'Klassische Hühnerbrühe mit Nudeln und Gemüse.',
+              price: 15,
             },
             {
               title: 'Tomatensuppe',
-              description:
-                'Cremige Tomatensuppe mit Reis und frischem Basilikum',
-              price: 16,
+              description: 'Tomatensuppe, serviert mit Reis oder Nudeln.',
+              price: 15,
             },
             {
-              title: 'Kalte Rote-Bete-Suppe',
-              description:
-                'Litauische kalte Rote-Bete-Suppe mit Gurke und Ei — saisonal',
+              title: 'Fischsuppe',
+              description: 'Fischbrühe mit Gemüse und Gewürzen.',
               price: 20,
-            },
-            {
-              title: 'Pilzsuppe',
-              description: 'Waldpilzsuppe mit Nudeln und Sauerrahm',
-              price: 22,
             },
             {
               title: 'Zwiebelsuppe',
-              description:
-                'Französische Zwiebelsuppe mit Crouton und Gruyère-Käse',
-              price: 24,
+              description: 'Langsam geschmorte Zwiebelsuppe.',
+              price: 15,
             },
             {
-              title: 'Minestrone',
-              description: 'Italienische Gemüsesuppe mit Nudeln und Parmesan',
+              title: 'Kalte Rote-Bete-Suppe',
+              description: 'Kalte Joghurt-Rote-Bete-Suppe mit frischem Gemüse.',
+              price: 20,
+            },
+            {
+              title: 'Ukrainischer Borschtsch',
+              description:
+                'Kräftige Rote-Bete-Suppe mit Gemüse und Bohnen, gewürzt mit Kräutern.',
+              price: 15,
+            },
+            {
+              title: 'Kuttelsuppe',
+              description:
+                'Traditionelle Rindfleisch-Kuttelsuppe mit Majoran und Gemüse.',
               price: 20,
             },
           ],
         },
         {
-          id: 'meals',
-          label: 'Fleischgerichte',
+          id: 'mains',
+          label: 'Hauptgerichte',
           items: [
             {
-              title: 'Schweineschnitzel',
+              title: 'Flunder',
               description:
-                'Traditionelles Schweineschnitzel mit Kartoffeln und gebratenem Kohl',
-              price: 38,
+                '13 PLN/100 g Fisch + 5 PLN für eine Beilage (Pommes oder Krautsalat)',
+              price: 13,
             },
             {
-              title: 'Gegrillter Schweinenacken',
+              title: 'Scholle',
               description:
-                'Kräutermarinierter Schweinenacken vom Grill, mit Kartoffeln serviert',
-              price: 44,
+                '15 PLN/100 g Fisch + 5 PLN für eine Beilage (Pommes oder Krautsalat)',
+              price: 15,
             },
             {
-              title: 'Rindergulasch',
-              description:
-                'Rindergulasch mit Gemüse geschmort, serviert mit Buchweizen',
+              title: 'Kabeljau',
+              description: '200 g mit Pommes und Krautsalat',
+              price: 45,
+            },
+            {
+              title: 'Zander',
+              description: '200 g mit Pommes und Krautsalat',
+              price: 50,
+            },
+            {
+              title: 'Gebratene Forelle',
+              description: '350 g mit Pommes und Krautsalat',
               price: 46,
             },
             {
-              title: 'Hähnchenbrust',
-              description: 'Gegrillte Hähnchenbrust mit Kräutersoße und Gemüse',
-              price: 36,
-            },
-            {
-              title: 'BBQ-Rippchen',
-              description:
-                'Schweinerippchen in BBQ-Soße, 4 Stunden langsam gegart',
-              price: 52,
-            },
-            {
-              title: 'Schweinefilet',
-              description: 'Filet in Sahnesoße mit Champignons und Buchweizen',
+              title: 'Gebackener Heilbutt',
+              description: '200 g mit Pommes und Krautsalat',
               price: 48,
             },
             {
-              title: 'Gebratene Ente',
-              description: 'Entenkeule mit Äpfeln und Rotkohl',
-              price: 58,
+              title: 'Gebackener Lachs',
+              description: '200 g mit Pommes und Krautsalat',
+              price: 48,
             },
             {
-              title: 'Boeuf bourguignon',
+              title: 'Gebratener Rotbarsch',
               description:
-                'In Rotwein geschmortes Rindfleisch mit Wurzelgemüse',
-              price: 62,
+                '13 PLN/100 g Fisch + 5 PLN für eine Beilage (Pommes oder Krautsalat)',
+              price: 13,
             },
             {
-              title: 'Wiener Schnitzel',
+              title: 'Schweineschnitzel',
               description:
-                'Dünnes Kalbsschnitzel in Panade mit Kapern und Zitrone',
-              price: 54,
+                '140 g mit Kartoffeln oder Pommes und Schmorkohl oder Krautsalat',
+              price: 35,
             },
             {
-              title: 'Hausgemachte Kohlrouladen',
-              description:
-                'Kohlrouladen mit Fleisch und Reis in Tomatensoße, wie bei Oma',
-              price: 34,
+              title: 'Gebratene Hähnchenleber',
+              description: 'Mit Kartoffeln und Krautsalat',
+              price: 35,
+            },
+            {
+              title: 'Paniertes Hähnchenfilet',
+              description: '130 g mit Kartoffeln oder Pommes und Krautsalat',
+              price: 35,
+            },
+            {
+              title: 'Gegrillter Schweinenacken',
+              description: '180 g mit Kartoffeln oder Pommes und Krautsalat',
+              price: 38,
+            },
+            {
+              title: 'Gegrilltes Hähnchenfilet',
+              description: 'Mit Kartoffeln oder Pommes und Krautsalat',
+              price: 38,
+            },
+            {
+              title: 'Kartoffelpuffer nach ungarischer Art',
+              description: 'Mit Sauerrahm',
+              price: 45,
+            },
+            { title: 'Schweinshaxe', description: 'Mit Schmorkohl', price: 50 },
+            {
+              title: 'Hackfleischkotelett',
+              description: '200 g mit Kartoffeln und Krautsalat',
+              price: 30,
+            },
+            {
+              title: 'Ungarisches Gulasch',
+              description: 'Mit schlesischen Klößen und Krautsalat',
+              price: 45,
+            },
+            {
+              title: 'Gefüllte Hähnchenroulade',
+              description: 'Mit Kartoffeln und Krautsalat',
+              price: 45,
+            },
+            {
+              title: 'Schweinerippchen in eigener Sauce',
+              description: 'Mit schlesischen Klößen und Krautsalat',
+              price: 45,
             },
           ],
         },
         {
-          id: 'dessert',
-          label: 'Desserts',
+          id: 'flour',
+          label: 'Aus dem Teig',
           items: [
             {
-              title: 'Klassischer Käsekuchen',
-              description: 'Hausgemachter Wiener Käsekuchen mit Erdbeersoße',
-              price: 18,
-            },
-            {
-              title: 'Apfelkuchen',
-              description: 'Warmer Apfelkuchen mit Zimt und Vanilleeis',
-              price: 16,
-            },
-            {
-              title: 'Handwerkliches Eis',
-              description:
-                'Drei Kugeln vom lokalen Eismacher, saisonale Sorten',
-              price: 14,
-            },
-            {
-              title: 'Tiramisu',
-              description: 'Klassisches Tiramisu mit Mascarpone und Espresso',
+              title: 'Kartoffelpuffer',
+              description: '3 Stück mit Sauerrahm',
               price: 20,
             },
             {
-              title: 'Panna cotta',
-              description: 'Panna cotta mit Himbeersoße und frischen Früchten',
-              price: 18,
-            },
-            {
-              title: 'Brownie',
-              description: 'Warmes Schokoladenbrownie mit Vanilleeis',
-              price: 16,
-            },
-            {
-              title: 'Crêpes',
+              title: 'Teigtaschen',
               description:
-                'Crêpes mit Quark und Rosinen, mit Sauerrahm übergossen',
-              price: 18,
+                'Bitte beim Personal nachfragen – verfügbare Sorten wechseln täglich',
+              price: 30,
             },
+          ],
+        },
+        {
+          id: 'salads',
+          label: 'Salate',
+          items: [
             {
-              title: 'Mohnrolle',
+              title: 'Haussalat',
               description:
-                'Hausgemachte Mohnrolle mit Zuckerguss und Orangenschale',
-              price: 14,
+                'Mit Hähnchenleber, Blauschimmelkäse, Walnüssen, Früchten und Honig-Senf-Dressing',
+              price: 38,
             },
             {
-              title: 'Crème brûlée',
-              description:
-                'Klassische Crème brûlée mit karamellisiertem Zucker und Vanille',
-              price: 22,
-            },
-            {
-              title: 'Saisonfrüchte',
-              description: 'Frische Früchte mit Schlagsahne und Minze',
-              price: 16,
+              title: 'Caesar Salat',
+              description: 'Mit gegrilltem Hähnchen',
+              price: 38,
             },
           ],
         },
