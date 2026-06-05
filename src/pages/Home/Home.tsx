@@ -31,9 +31,10 @@ function scrollInto({ id }: { id: string }) {
 }
 
 export default function Home() {
+  const { lang } = useLanguage();
   return (
     <>
-      <div className="page">
+      <div className="page" key={lang}>
         <Header />
         <MeetUs />
         <Menu />
